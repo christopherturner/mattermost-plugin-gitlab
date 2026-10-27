@@ -202,7 +202,6 @@ export default class SidebarButtons extends PureComponent<SidebarButtonsProps, S
                     overlay={<Tooltip id='refreshTooltip'>{'Refresh'}</Tooltip>}
                 >
                     <a
-                        href='#'
                         style={button}
                         onClick={this.getData}
                     >
@@ -221,6 +220,8 @@ const getStyle = makeStyleFromTheme((theme) => {
             display: 'block',
             marginBottom: '10px',
             width: '100%',
+            cursor: 'pointer',
+            textDecoration: 'none',
         },
         buttonHeader: {
             color: changeOpacity(theme.sidebarText, 0.6),
@@ -228,6 +229,7 @@ const getStyle = makeStyleFromTheme((theme) => {
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
+            textDecoration: 'none',
         },
         buttonCount: {
             marginLeft: '2px',
